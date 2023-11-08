@@ -1,2 +1,5 @@
 # Emacs
 *~
+
+# Ignore contents of temporary files.
+tmp/
