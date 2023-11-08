@@ -1,2 +1,6 @@
 2023-11-08: Wednesday
-TODO: Migrate previous work from 2023-11-06.
+TODO: Get livereload working.
+TODO: Explore Python implementation of ed text editor.
+
+DONE: Migrate previous work from 2023-11-06.
+DONE: Write README.md.
