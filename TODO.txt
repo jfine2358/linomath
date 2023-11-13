@@ -5,6 +5,7 @@ DONE: Migrate previous work from 2023-11-06.
 DONE: Write README.md.
 
 2023-11-13: Monday
-TODO: Install orca screen reader.
 TODO: Explore orca screen reader.
 TODO: Explore Python implementation of ed text editor.
+
+FAILED: Install orca screen reader.

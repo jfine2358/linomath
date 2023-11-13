@@ -1,5 +1,173 @@
 # Linomath notes
 
+## 2023-11-13
+
+### Orca screen reader
+
+#### Orca links
+
+I start with a search for `orca screen reader`.
+
+1. <https://www.google.com/search?q=orca+screen+reader>.
+2. <https://help.gnome.org/users/orca/stable/index.html.en>.
+3. <https://en.wikipedia.org/wiki/Orca_(assistive_technology)>.
+4. <https://help.gnome.org/users/orca/stable/introduction.html.en>.
+5. <https://www.boia.org/blog/orca-screen-reader-an-overview-for-developers-and-content-creators>.
+6. <https://www.a11yproject.com/posts/getting-started-with-orca/>.
+7. <https://docs.oracle.com/cd/E26502_01/html/E29026/ats-2.html>.
+8. <https://help.ubuntu.com/stable/ubuntu-help/a11y-screen-reader.html.en>.
+9. <https://a11ysupport.io/learn/at/orca>.
+10. <https://wiki.mozilla.org/Screen_Reader_-_Orca>.
+
+#### Install Orca links
+
+None of the above explain how to install Orca. So I for `install orca
+screenreader`.
+
+1. <https://www.google.com/search?q=install+orca+screen+reader>.
+2. <https://wiki.debian.org/Accessibility/Orca>.
+3. Link 6 above.
+4. Link 8 above.
+5. 404! <https://www.unixmen.com/install-screen-reader-orca-3-17-3-in-ubuntu-linux/>.
+6. Link 4 above.
+7. <https://techblog.wikimedia.org/2020/07/02/an-orca-screen-reader-tutorial/>.
+8. <https://docs.fedoraproject.org/en-US/quick-docs/accessibility-post-installation-with-orca/>
+9. <https://docs.oracle.com/en/operating-systems/oracle-linux/6/accessibility/ol-assistive-orca.html>.
+10. <https://steamcommunity.com/groups/steamuniverse/discussions/1/6620895347254103056/>.
+11. <https://www.kicksecure.com/wiki/Orca>.
+
+For install I will use links 2, 7, 11.
+
+#### Install Orca overview
+
+Here's those links again.
+
+2. <https://wiki.debian.org/Accessibility/Orca>.
+7. <https://techblog.wikimedia.org/2020/07/02/an-orca-screen-reader-tutorial/>.
+11. <https://www.kicksecure.com/wiki/Orca>.
+
+Debian tells me to `sudo apt install orca`, and perhaps enable
+autostart orca. For browsers it recommends firefox-esr. WebKit
+considered not production ready.
+
+Debian tells me that Orca uses speech-dispatcher to access speech
+synthesizer. That's part of another documentation page:
+- <https://wiki.debian.org/accessibility#Speech-Dispatcher>
+
+Techblog says install `orca` and `espeak-ng`.
+
+> The `espeak-ng` voices aren’t great at all, but so far they seem to
+be the only thing that works.
+
+Techblog provides a link to a YouTube video tutorial (from 2015,
+12,000 view by 2023).  -
+<https://www.youtube.com/watch?v=ieo20UtUobw>.
+
+The Kicksecure page is interesting because it relates to virtual
+machines. They suggest:
+- `sudo apt install --no-install-recommends orca`
+
+#### Install Orca
+
+1. `sudo dnf update`.
+2. `sudo dnf install orca`.
+```
+Installed:
+  brlapi-0.8.4-10.fc38.x86_64           brltty-6.5-10.fc38.x86_64            
+  orca-44.1-1.fc38.noarch               pcre2-utf32-10.42-1.fc38.1.x86_64    
+  python3-brlapi-0.8.4-10.fc38.x86_64   python3-louis-3.25.0-1.fc38.noarch   
+  python3-pyatspi-2.46.0-2.fc38.noarch  python3-speechd-0.11.5-1.fc38.x86_64
+```
+
+Let's take a look.
+```
+orca --help
+Usage: orca [-h] [-v] [-r] [-s] [-l] [-e OPTION] [-d OPTION] [-p NAME]
+            [-u DIR] [--debug-file FILE] [--debug]
+
+Optional arguments:
+  -h, --help                   Show this help message and exit
+  -v, --version                Version of this application
+  -r, --replace                Replace a currently running instance of this
+                               screen reader
+  -s, --setup                  Set up user preferences (GUI version)
+  -l, --list-apps              Print the known running applications
+  -e OPTION, --enable OPTION   Force use of option
+  -d OPTION, --disable OPTION  Prevent use of option
+  -p NAME, --profile NAME      Load profile
+  -u DIR, --user-prefs DIR     Use alternate directory for user preferences
+  --debug-file FILE            Send debug output to the specified file
+  --debug                      Send debug output to debug-YYYY-MM-DD-
+                               HH:MM:SS.out
+
+Report bugs to orca-list@gnome.org.
+```
+
+OK. So
+
+1. First check my PC is connected to my stereo.
+2. Start orca
+```
+$ orca -r
+Warning:          Could not load keyboard geometry for :0
+                  BadName (named color or font does not exist)
+                  Resulting keymap file will not describe geometry
+
+12:36:25.554207 - EVENT MANAGER: No focus
+12:45:35.488892 - EVENT MANAGER: No focus
+12:53:36.301321 - EVENT MANAGER: No focus
+12:53:55.559620 - EVENT MANAGER: No focus
+12:54:14.644890 - EVENT MANAGER: No focus
+```
+3. Ctrl-C does stop orca, but not immediately.
+
+#### Orca and Sway
+
+The warning about `geometry for :0` suggests a wayland problem. (I'm
+using Sway.)
+
+1. <https://www.google.com/search?q=orca+sway>.
+2. <https://www.freelists.org/post/orca/Sway-window-manager-and-orca,5>.
+
+The freelists/orca post is helpful with technical detail. It suggests
+that if xwayland doesn't work then it won't be easy to fix. It's good
+to know that this discussion, and the list it is on, both exist.
+
+#### Freelists Orca
+
+The Freelists Orca list is now an official Orca community tool,
+replacing the GNOME hosted list. The move took place in November 2022.
+
+1. <https://www.freelists.org/list/orca>.
+2. <https://wiki.gnome.org/action/show/Projects/Orca>.
+3. <https://mail.gnome.org/archives/orca-list/>.
+
+
+#### Why Freelists Orca?
+
+Briefly, in 2022 GNOME decided to migrate away from Mailman, and onto
+Discourse. The Orca users weren't happy, and decided instead to
+migrate to Freelists. More information in:
+
+1. <https://mail.gnome.org/archives/orca-list/2022-September/thread.html>.
+2. <https://mail.gnome.org/archives/orca-list/2022-October/thread.html>.
+3. <https://mail.gnome.org/archives/orca-list/2022-November/thread.html>.
+
+#### The Orca debug log
+
+Running `orca -r --debug` and get many error. These include, every few
+minutes:
+```
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/orca/braille.py", line 1879, in init
+    _brlAPI = brlapi.Connection()
+              ^^^^^^^^^^^^^^^^^^^
+  File "brlapi.pyx", line 456, in brlapi.Connection.__init__
+brlapi.ConnectionError: couldn't connect to b':0' with key b'keyfile:/etc/brlapi.key+polkit': connect: No such file or directory
+(brlerrno 11, libcerrno 2, gaierrno 0)
+Is BRLTTY really running?
+```
+
 ## 2023-11-08
 
 ### livereload
