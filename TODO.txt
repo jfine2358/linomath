@@ -1,6 +1,7 @@
 2023-11-08: Wednesday
 TODO: Explore Python implementation of ed text editor.
 
+DONE: Publish at https://github.com/jfine2358/linomath.
 DONE: Get livereload working.
 DONE: Migrate previous work from 2023-11-06.
 DONE: Write README.md.
