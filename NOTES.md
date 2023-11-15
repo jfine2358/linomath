@@ -1,5 +1,48 @@
 # Linomath notes
 
+## 2023-11-15
+
+### Aria speech in Firefox
+
+I started this topic hoping to find a work around for Orca not working
+for me on Sway / Wayland. I naively thought that it was enough to
+provide Aria attributes, and then Firefox would do the rest. However,
+Aria requires a screen reader to be present.
+
+My misunderstanding is well summed up by the search, whose results
+disappointed me until I understood what was going on.
+
+- <https://www.google.com/search?q=firefox+enable+aria>.
+
+#### Screen reader emulator
+
+1. <https://www.google.com/search?q=screen+reader+emulator>.
+2. <https://silktide.com/tools/toolbar/>.
+3. <https://webaim.org/simulations/screenreader>.
+4. <https://stackoverflow.com/questions/43340690/is-there-an-online-emulating-screen-reader-tool-to-test-against-a-custom-web-pag>.
+5. <https://etc.usf.edu/techease/4all/web-accessibility/using-the-fangs-screen-reader-emulator/>.
+6. <https://assistivlabs.com/use-cases/online-screen-reader-testing>
+7. <https://www.standards-schmandards.com/projects/fangs.html>.
+
+#### Chrome Vox
+
+Somehow I was led to Chrome Vox, which I had heard of.
+
+1. <https://www.google.com/search?q=chrome+vox>.
+2. <https://chromewebstore.google.com/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn>
+3. <https://www.lenovo.com/us/en/glossary/chromevox/>.
+4. <https://support.google.com/chromebook/answer/7031755?hl=en-GB>.
+5. <https://pressbooks.library.torontomu.ca/wafd/chapter/chromevox-screen-reader-install-and-setup/>.
+6. <https://hikeorders.com/accessibility/glossary/what-is-chrome-vox/>.
+7. <https://www.unimelb.edu.au/accessibility/tools/screen-reader-testing>.
+
+I tried Chrome Vox on Linux and found no voices shown in Options. So
+game over. The reviews (perhaps on other platforms) were terrible.
+
+- <chrome-extension://kgejglhpjiefppelpmljglcjbhoiplfn/chromevox/background/options.html>.
+- <https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn>.
+
+
 ## 2023-11-13
 
 ### Orca screen reader

@@ -8,8 +8,9 @@ DONE: Write README.md.
 FAILED: Install orca screen reader.
 
 2023-11-14: Tuesday
-TODO: Aria speech in Firefox.
 TODO: Explore Python implementation of ed text editor.
+
+DONE: Aria speech in Firefox.
 
 FUTURE:
 TODO: Explore orca screen reader.
