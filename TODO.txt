@@ -10,6 +10,8 @@ FAILED: Install orca screen reader.
 2023-11-14: Tuesday
 TODO: Explore Python implementation of ed text editor.
 
+DONE: Prior Python ed.
+DONE: Prior Python readline.
 DONE: Aria speech in Firefox.
 
 FUTURE:

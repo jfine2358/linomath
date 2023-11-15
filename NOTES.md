@@ -1,6 +1,59 @@
 # Linomath notes
 
+
 ## 2023-11-15
+
+### Python implementation of ed editor
+
+#### Prior Python ed
+
+1. <https://pypi.org/search/?q=python+ed+editor>.
+2. <https://pypi.org/project/ed/>.
+3. <https://github.com/eumiro/ed/>.
+
+Item 3 implements a buffer object.
+
+1. <https://github.com/topics/ed?l=python>.
+2. <https://github.com/linarphy/py_ed>.
+3. <https://github.com/That1M8Head/Streakline>.
+
+Item 1 gives 11 repositories including the previous eumiro. Items 2
+and 3 are only items of interest in search 1.
+
+Item 2 gives a single 800 line Python file, much of which is devoted
+to command line options. State, such as current and last command,
+stored as global variables.
+
+Item 3 is abandoned.
+
+#### Prior Python readline
+
+The `ed` command uses GNU `readline` if available, as does the Python
+REPL on Linux. But `readline` is not available on Windows.
+
+1. <https://www.google.com/search?q=readline+windows>.
+2. <https://gnuwin32.sourceforge.net/packages/readline.htm>.
+3. <https://stackoverflow.com/questions/51157443/pythons-readline-module-not-available-for-windows>.
+4. <https://tiswww.case.edu/php/chet/readline/rltop.html>.
+5. <https://bugs.python.org/issue45870>.
+6. <https://en.wikipedia.org/wiki/GNU_Readline>.
+7. <https://pypi.org/project/readline/>.
+8. <https://copdips.com/2018/05/using-readline-in-python-repl-on-windows.html>
+9. <https://readthedocs.org/projects/windows-readline/>.
+10. <https://github.com/PowerShell/PSReadLine>.
+11. <https://github.com/JuliaAttic/readline>.
+
+Item 2 is stale. Last changed 2008.
+
+Item 3 suggests instead of `pyreadline` use
+12. <https://github.com/pyreadline3/pyreadline3>.
+
+Item 5 has been migrated to github. Closed in 2022 due to lack of
+interest in submitting a docs pull request documenting pyreadline3.
+13. <https://github.com/python/cpython/issues/90028>
+
+Item 8 references IPython, which replaced `PyReadline` by
+14. <https://python-prompt-toolkit.readthedocs.io/en/stable/>
 
 ### Aria speech in Firefox
 
@@ -116,9 +169,9 @@ machines. They suggest:
 2. `sudo dnf install orca`.
 ```
 Installed:
-  brlapi-0.8.4-10.fc38.x86_64           brltty-6.5-10.fc38.x86_64            
-  orca-44.1-1.fc38.noarch               pcre2-utf32-10.42-1.fc38.1.x86_64    
-  python3-brlapi-0.8.4-10.fc38.x86_64   python3-louis-3.25.0-1.fc38.noarch   
+  brlapi-0.8.4-10.fc38.x86_64           brltty-6.5-10.fc38.x86_64
+  orca-44.1-1.fc38.noarch               pcre2-utf32-10.42-1.fc38.1.x86_64
+  python3-brlapi-0.8.4-10.fc38.x86_64   python3-louis-3.25.0-1.fc38.noarch
   python3-pyatspi-2.46.0-2.fc38.noarch  python3-speechd-0.11.5-1.fc38.x86_64
 ```
 
